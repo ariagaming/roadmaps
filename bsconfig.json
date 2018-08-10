@@ -1,0 +1,25 @@
+{
+    "name": "reason-scripts",
+    "sources": [
+        "src",
+        "src/Components",
+        "src/Domain"
+    ],
+    "bs-dependencies": [
+        "reason-react",
+        "@glennsl/bs-jest",
+        "bs-luxon"
+    ],
+    "reason": {
+        "react-jsx": 2
+    },
+    "bsc-flags": [
+        "-bs-super-errors"
+    ],
+    "refmt": 3,
+    "package-specs": {
+        "module": "es6",
+        "in-source": true
+    },
+    "suffix": ".bs.js"
+}

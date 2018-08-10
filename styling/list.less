@@ -1,0 +1,15 @@
+@import "./colors";
+
+.list {
+    list-style: none;
+    li {
+        &:hover {
+            background: @secondary;
+            color: white;
+        }
+        &.selected {
+            background: @primary;
+            color: white;
+        }
+    }
+}

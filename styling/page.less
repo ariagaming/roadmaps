@@ -1,0 +1,87 @@
+.page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 2rem;
+    width: 80%;
+
+    &.a4 {
+        width: 21cm !important;
+        height: 29.7cm !important;
+        &.portrait {
+            width: 29.7cm !important;
+            height: 21cm !important;
+        }
+    }
+    &.a3 {
+        width: 29.7cm !important;
+        height: 42cm !important;
+    }
+}
+
+.page[data-size="A4"] {
+    width: 21cm !important;
+    height: 29.7cm !important;
+}
+
+.page[data-size="A4"][data-layout="portrait"] {
+    width: 29.7cm !important;
+    height: 21cm !important;
+}
+
+.page[data-size="A3"] {
+    width: 29.7cm !important;
+    height: 42cm !important;
+}
+
+.page[data-size="A3"][data-layout="portrait"] {
+    width: 42cm !important;
+    height: 29.7cm !important;
+}
+
+.page[data-size="A5"] {
+    width: 14.8cm !important;
+    height: 21cm !important;
+}
+
+.page[data-size="A5"][data-layout="portrait"] {
+    width: 21cm !important;
+    height: 14.8cm !important;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    * {-webkit-print-color-adjust:exact;}
+
+    html,
+    body,
+    #root {
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: 0 !important;
+    }
+    .page {
+        margin: 0 !important;
+        box-shadow: 0 0 0 !important;
+    }
+    .main-menu,
+    .sheet-menu {
+        visibility: hidden;
+    }
+    .character-sheet {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .content {
+        .nav-button {
+            display: none;
+        }
+    }
+}
