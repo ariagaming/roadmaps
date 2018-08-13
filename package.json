@@ -1,8 +1,8 @@
 {
-    "name": "aria-reason",
+    "name": "roadmaps",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://ariagaming.github.io/aria-reason/",
+    "homepage": "https://ariagaming.github.io/roadmaps/",
     "dependencies": {
         "bs-luxon": "^0.3.0",
         "luxon": "^1.3.3",

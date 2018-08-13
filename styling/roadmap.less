@@ -1,19 +1,64 @@
+@field-width: 60px;
 .roadmap {
+    overflow: auto;
+    margin: 1rem;
+    border-collapse: collapse;
+    &--months {
+        th {
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+            &:first-child {
+                width: auto;
+            }
+        }
+    }
 
+    thead tr th, tbody tr td {
+        border-right: 1px dashed black;
+        border-top: 1px solid lightgray;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 14px;
 
-   thead, tbody {
-       tr {
-           th {
-               width: 100px;
-           }
-       }
-   }
+        &:first-child {
+            border-left: 1px dashed black;
+            width: auto;
+        }
+    }
 
-   tbody {
-       tr {
-           td {
-                border-bottom: 1px dashed black;
-           }
-       }
-   }
+    thead tr th {
+        padding-bottom: 7px;
+        padding-top: 7px;
+    }
+    tbody tr:last-child td {
+        border-bottom: 1px solid lightgray;
+    }
+
+    .event {
+        position: absolute;
+        border-radius: 4px;
+        transition: left 0.5s ease-in-out, width 0.5s ease-in-out;
+        .title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: capitalize;
+        }
+    }
+
+    tbody tr td {
+        .title {
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 1rem;
+            }
+        }
+    }
+
 }
