@@ -18,11 +18,8 @@ li {
   list-style: none;
 }
 body {
-  background: lightgrey;
+  background: white;
   font-size: 12px;
-}
-button {
-  border-radius: 0;
 }
 .page {
   background: white;
@@ -269,12 +266,45 @@ button {
   background: #01bcd5;
   color: white;
 }
-.roadmap thead tr th,
-.roadmap tbody tr th {
-  width: 100px;
+.roadmap {
+  overflow: auto;
 }
+.roadmap--months th {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+}
+.roadmap thead tr th,
 .roadmap tbody tr td {
-  border-bottom: 1px dashed black;
+  border-right: 1px dashed black;
+  border-top: 1px solid lightgray;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 14px;
+}
+.roadmap thead tr th {
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+.roadmap .event {
+  position: absolute;
+  border-radius: 4px;
+}
+.roadmap .event .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: capitalize;
+}
+.roadmap tbody tr td .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+.roadmap tbody tr td .title span {
+  position: absolute;
+  top: 50%;
 }
 .version-indicator {
   position: fixed;
@@ -3860,13 +3890,6 @@ button {
 .fab {
   font-family: 'Font Awesome 5 Brands';
 }
-@font-face {
-  font-family: ckfantasy;
-  src: url(./webfonts/Sunflower/Sunflower-Light.ttf);
-}
 body {
-  background: #fff3f5;
-  font-size: 12px;
-  font-weight: normal;
-  padding-top: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
